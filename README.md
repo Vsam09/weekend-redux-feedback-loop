@@ -11,20 +11,24 @@ Create a survey that collects the inputs for feeling, understanding, support and
 [x] Create database using provided data.sql
 [] Create 5 components
     [] Feeling - How are you feeling today?
+        [] feeling.router.js
         [] A Next Button to route to the next page
-        [] Input placeholder for feedback inputs
+        [] Input placeholder for feedback number inputs
 
     [] Understanding - How well are you understanding the content?
+        [] understanding.router.js
         [] A Next Button to route to the next page
-        [] Input placeholder for feedback inputs
+        [] Input placeholder for feedback number inputs
         
     [] Support - How well are you being supported?
+        [] support.router.js
         [] A Next Button to route to the next page
-        [] Input placeholder for feedback inputs
+        [] Input placeholder for feedback number inputs
         
     [] Comment - Any comments you want to leave?
+        [] comment.router.js
         [] A Next Button to route to the next page
-        [] Input placeholder for feedback inputs
+        [] Input placeholder for feedback number inputs
         
     [] Review - Reviews all inputs 
         [] Submit button onClick should save to the database 

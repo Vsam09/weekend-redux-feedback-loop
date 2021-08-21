@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-
+import {HashRouter as Router, Route, Link} from 'react-router-dom';
 function App() {
+
+  let [survey, setSurvey] = useState('');
+
+  useEffect(() => {
+    fetchSurvey();
+  }, []);
+
+  const fetchSurvey(() => {
+    axios({
+      method: 'GET',
+      url: '/api/survey'
+    }).then((response) => {
+      console.log('our response data', response.data)
+      setSurvey(response.data)
+    }).catch((error) => {
+      console.log('GET app', error)
+    });
+  })
 
   return (
     <div className='App'>
