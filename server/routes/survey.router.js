@@ -9,9 +9,9 @@ router.post('/', (req, res) => {
     let sqlQuery =`
        INSERT INTO "feedback"
        ("feeling", "understanding", "support", "comments")
-       VALUE 
+       VALUES
        ($1, $2, $3, $4)
-       `;
+       ;`;
        let sqlParams = [
         req.body.feeling,
         req.body.understanding,
@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
         console.log(response);
         res.sendStatus(200);
     }).catch((error) => {
-        console.log('POSTerror is', error);
+        console.log('Router POST has error', error);
         res.sendStatus(500);
     })
 })

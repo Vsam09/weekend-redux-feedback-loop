@@ -6,14 +6,15 @@ function Feeling() {
 
     let history = useHistory();
     let dispatch = useDispatch();
-
     let [feeling, setFeeling] = useState('');
-    
+
     const goToUnderstanding = () => {
+        console.log('feelings', feeling)
+
         if (feeling <= 5 && feeling > 0) {
             dispatch({
                 type: 'ADD_FEELING',
-                payload: feeling
+                payload:  {feeling}
             })
         history.push('/understanding')
         }
