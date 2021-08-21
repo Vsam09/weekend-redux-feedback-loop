@@ -5,8 +5,8 @@ import axios from 'axios';
 
 
 function Review() {
-    let history = useHistory();
 
+    let history = useHistory();
     const reviewInfo = useSelector(store => store.surveyReducer)
 
     const submitFeedback= () => {
@@ -15,10 +15,10 @@ function Review() {
             url: '/survey',
             data: reviewInfo
         }).then((response) => {
-            history.push('/complete');
             console.log(response);
-        }).catch((err) => {
-            console.log(err);
+            history.push('/complete');
+        }).catch((error) => {
+            console.log('POST in review has error', error);
         })
 
     }
