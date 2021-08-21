@@ -47,5 +47,7 @@ Create a survey that collects the inputs for feeling, understanding, support and
     [x] Review - Reviews all inputs 
         [x] Submit button onClick should save to the database 
            and start over with a New Survey
+    [x] Complete - Thank you
+        [x] button to leave new survey
 
 dditional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).

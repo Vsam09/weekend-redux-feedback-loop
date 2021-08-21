@@ -15,7 +15,7 @@ function Review() {
             url: '/survey',
             data: reviewInfo
         }).then((response) => {
-            history.push('/');
+            history.push('/complete');
             console.log(response);
         }).catch((err) => {
             console.log(err);
