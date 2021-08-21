@@ -4,19 +4,26 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore} from 'redux';
+
  
-const surveyReducer = (state = 0, action) => {
+const surveyReducer = (state = [], action) => {
     switch (action.type) {
         case ('ADD_FEELING'):
-            return state;
+            return action.payload;
+        case ('ADD_UNDERSTANDING'):
+            return action.payload;
+        case ('ADD_SUPPORT'):
+            return action.payload;
+        case ('ADD_COMMENTS'):
+            return action.payload;
         default:
     }
-        
+    return state;
 }
 
 const store = createStore(
-    surveyReducer
+        surveyReducer,
 );
 
 ReactDOM.render( 

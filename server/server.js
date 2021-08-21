@@ -10,7 +10,7 @@ app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
 const surveyRouter = require('./routes/survey.router')
-app.get('/api/survey', surveyRouter)
+app.use('/api/survey', surveyRouter)
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {

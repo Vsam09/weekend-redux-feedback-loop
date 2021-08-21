@@ -4,27 +4,9 @@ import './App.css';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
+import Support from '../Support/Support';
+
 function App() {
-
-  let [survey, setSurvey] = useState('');
-
-  //Don't forget useEffect here
-  useEffect(() => {
-    fetchSurvey();
-  }, []);
-  //Axios GET data from database
-  const fetchSurvey = () => {
-    axios({
-      method: 'GET',
-      url: '/api/survey'
-    }).then((response) => {
-      console.log('our response data', response.data)
-      setSurvey(response.data)
-
-    }).catch((error) => {
-      console.log('GET app', error)
-    })
-  }
 
   return (
     <div className='App'>
@@ -40,7 +22,18 @@ function App() {
       <Route path='/understanding' exact>
         <Understanding />
       </Route>
-        
+
+      <Route path='/support' exact>
+        <Support />
+      </Route>
+
+      <Route path='/comments' exact>
+        {/* <Comments /> */}
+      </Route>
+
+      <Route path='/review' exact>
+        {/* <Review /> */}
+      </Route>
 
       </Router>
     </div>
