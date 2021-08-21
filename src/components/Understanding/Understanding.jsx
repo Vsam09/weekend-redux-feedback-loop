@@ -25,15 +25,14 @@ function Understanding() {
     return (
         <div>
             <h1>How well are you understanding the content?</h1>
-            <h2>Please rate your understanding from 1 - 5</h2>
-            <h3> 
+            <h2> 
             <input 
                 type="number" 
-                placeholder="Rate your understanding 1 - 5" 
+                placeholder="Rate your understanding" 
                 value={understanding}
                 onChange={(event) => setUnderstanding(event.target.value)}/> 
            <button onClick={goToSupport}>Next</button>
-           </h3>
+           </h2>
 
         </div>
     )

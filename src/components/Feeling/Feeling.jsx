@@ -25,15 +25,14 @@ function Feeling() {
     return(
         <div>
         <h1>How are your feeling today? </h1>
-        <h2>Please rate your feelings from 1 - 5</h2>
-        <h3> 
+        <h2> 
         <input 
             type="number" 
-            placeholder="Rate your day 1 - 5"
+            placeholder="Rate your day"
             value={feeling}
             onChange={(event) => setFeeling(event.target.value)}/> 
         <button onClick={goToUnderstanding}>Next</button>
-        </h3>
+        </h2>
         </div>
     )
 }
